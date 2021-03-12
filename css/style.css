@@ -235,27 +235,6 @@ section .container {
   background-color: aquamarine;
 }
 
-/* form {
-  width: 50%;
-  min-width: 9rem;
-  margin: 0 30px;
-}
-  
-input, textarea {
-  float: left;
-  width: 100%;
-  max-width: 100%;
-  border: none;
-  margin: 0.5rem 0;
-  padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
-  background: darken(#f9f9f9, 10%);
-  color: darken(#f9f9f9, 50%);
-  
-}
-textarea {
-  height: 10rem;
-} */
 
 footer {
   width: 100%;
@@ -264,10 +243,21 @@ footer {
   background-color: beige;
 }
 
-footer a {
+.footer-link{
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.footer-link a + a{
+  margin-left: 30px;
+}
+.bi-twitter {
   color: #0d6efd;
-  display: block;
-  padding: 10px
+}
+
+.bi-github {
+  color: #333;
 }
 
 .page-top a {
@@ -278,7 +268,7 @@ footer a {
 }
 
 @media screen and (max-width:1024px) {
-  .innar {
+  .inner {
     width: 100%;
   }
 }
