@@ -180,6 +180,103 @@ section .container {
   line-height: 1.5;
 }
 
+/* modal */
+
+.modal {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+}
+
+.modal-bg {
+  background: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  width: 100%;
+}
+
+.modal-content {
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  text-align: left;
+}
+
+
+.modal-content-inner {
+  position: relative;
+  padding: 24px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* 閉じるボタン */
+.modal-close {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+}
+
+.modal-close::before,
+.modal-close::after{
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transform: rotate(45deg);
+  transform-origin: 0% 50%;
+  position: absolute;
+  top:calc(14% - 5px);
+  left: 14%;
+}
+
+.modal-close::after{
+  transform: rotate(-45deg);
+  transform-origin: 100% 50%;
+  left: auto;
+  right: 14%;
+}
+
+.modal-ttl{
+  font-weight: bold;
+  margin: 5px 0 10px;
+}
+
+.modal-text{
+  margin:0 0 10px  ;
+}
+
+.modal-content-inner ul{
+  padding-left: 1rem;
+  margin-top: 5px;
+}
+
+.portfolio-btn{
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  margin: 10px 0 0;
+  padding: 15px;
+  background: #006166;
+  border-radius: 100% 80px/80px 100%;
+  transition: .2s;
+}
+
+.portfolio-btn:hover{
+  border-radius: 10% 80px/80px 10%;
+}
+
+/* modal */
+
 .date {
   text-align: left;
 }
@@ -235,7 +332,6 @@ section .container {
   background-color: aquamarine;
 }
 
-
 footer {
   width: 100%;
   text-align: center;
@@ -243,15 +339,16 @@ footer {
   background-color: beige;
 }
 
-.footer-link{
+.footer-link {
   display: flex;
   justify-content: center;
   margin: 15px 0;
 }
 
-.footer-link a + a{
+.footer-link a+a {
   margin-left: 30px;
 }
+
 .bi-twitter {
   color: #0d6efd;
 }
