@@ -392,6 +392,11 @@ footer {
   .portfolio-item {
     width: 70%;
   }
+
+  .modal-content{
+    width: 90%;
+  }
+
   .skill-list {
     margin-bottom: 30px;
     max-width: 100%;
