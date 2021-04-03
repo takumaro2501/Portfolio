@@ -102,10 +102,18 @@ section h2 {
   font-size: 2rem;
 }
 
-section .container {
+.container {
   padding: 15px;
   margin: 10px auto;
   display: flex;
+  opacity: 0;
+  transform: translateX(-25%);
+  transition: all .5s;
+}
+
+.js-fadein{
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .myicon {
@@ -223,6 +231,7 @@ section .container {
   width: 20px;
   height: 20px;
   margin-left: auto;
+  cursor: pointer;
 }
 
 .modal-close::before,

@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="css/html5reset-1.6.1.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" type="text/css" href="css/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="css/slick/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="css/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="css/slick/slick-theme.css" />
 
 </head>
 
@@ -25,7 +25,7 @@
 
 
     <nav>
-      <ul class="innar">
+      <ul class="innar" >
         <li><a class="btn" href="./">HOME</a></li>
         <li><a href="#about">about</a></li>
         <li><a href="#portfolio">portfolio</a></li>
@@ -39,7 +39,7 @@
     <section class="about" id="about">
       <div class="inner">
         <h2>about me</h2>
-        <div class="container">
+        <div class="container" data-content="0">
           <div class="myicon">
 
           </div>
@@ -58,56 +58,56 @@
       <div class="inner">
 
         <h2>portfolio</h2>
-        <div class="container slider">
+        <div class="container" data-content="1">
 
-          
+
           <div class="portfolio-item">
             <a href="" class="js-modal-open" data-target="modal1">
               <div class="portfolio-item-inner">
                 <figure><img src="img/hosonomeramen.png" alt="ほそのめらーめん"></figure>
                 <p class="categoly">News</p>
                 <p class="item-desc">らーめん屋のWebサイトです。</p>
-                
+
               </div>
             </a>
           </div>
-          
+
           <div class="portfolio-item">
             <a href="" class="js-modal-open" data-target="modal2">
               <div class="portfolio-item-inner">
                 <figure><img src="img/petshop-tera.png" alt="ペットショップ・テラ"></figure>
                 <p class="categoly">News</p>
                 <p class="item-desc">ペットショップのホームページを作成しました。</p>
-                
+
               </div>
             </a>
           </div>
-          
+
           <div class="portfolio-item">
             <a href="" class="js-modal-open" data-target="modal3">
               <div class="portfolio-item-inner">
                 <figure><img src="img/the_quiz.png" alt="ざ・くいず"></figure>
                 <p class="categoly">News</p>
                 <p class="item-desc">Javascriptの学習を兼ねた4択のクイズゲームを作成しました。</p>
-                
+
               </div>
             </a>
           </div>
-          
+
           <div class="portfolio-item">
             <a href="" class="js-modal-open" data-target="modal4">
               <div class="portfolio-item-inner">
                 <figure><img src="img/123teeth.png" alt="123Teeth"></figure>
                 <p class="categoly">News</p>
                 <p class="item-desc">グループ制作で作成した審美歯科のLPサイト</p>
-    
+
               </div>
             </a>
           </div>
-          
+
         </div>
       </div>
-      
+
       <!-- modal -->
       <div id="modal1" class="modal js-modal">
         <div class="modal-bg js-modal-close"></div>
@@ -188,7 +188,7 @@
       <div class="inner">
 
         <h2>skill</h2>
-        <div class="container">
+        <div class="container" data-content="2">
           <div class="skill-list">
             <dl>
               <dt>フロントエンド</dt>
@@ -227,7 +227,7 @@
     <section class="contact" id="contact">
       <div class="inner">
         <h2>Contact</h2>
-        <div class="container">
+        <div class="container" data-content="3">
           <div class="contact-text">
             <p>感想などいただけると助かります。<br>
               Twitterもやっています。<br>
@@ -267,57 +267,11 @@
   </footer>
 
 
-<!-- js -->
+  <!-- js -->
 
   <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/main.js"></script>
 
-
-  <script>
-    'use strict';
-
-    $(function () {
-      $('.js-modal-open').each(function () {
-        $(this).on('click', function () {
-          var target = $(this).data('target');
-          var modal = document.getElementById(target);
-          $(modal).fadeIn(300);
-          return false;
-        });
-      });
-
-      // ウィンドウを閉じる
-      $('.js-modal-close').on('click', function () {
-        $('.js-modal').fadeOut(300);
-        return false;
-      });
-    });
-  </script>
-
-  <script>
-    'use strict';
-    // スムーススクロール
-    $(function () {
-      $('a[href^="#"]').click(function () {
-        var speed = 300;
-        var href = $(this).attr("href");
-        var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top;
-        $("html, body").animate({ scrollTop: position }, speed, "swing");
-        return false;
-      });
-
-      $(window).on("scroll", function () {
-        if ($(this).scrollTop() > 300) {
-          $(".page-top").fadeIn();
-        } else {
-          $(".page-top").fadeOut();
-        }
-      });
-    });
-  </script>
-
-
- </script>
 </body>
 
 </html>
