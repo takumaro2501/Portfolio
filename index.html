@@ -10,11 +10,9 @@
   <meta name="description" content="根本 拓のポートフォリオサイトです。">
 
   <link rel="stylesheet" href="css/html5reset-1.6.1.css">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" type="text/css" href="css/slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="css/slick/slick-theme.css" />
-
+  <link rel="stylesheet" href="http://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body id="all">
@@ -26,7 +24,7 @@
 
     <nav>
       <ul class="innar" >
-        <li><a class="btn" href="./">HOME</a></li>
+        <li><a href="./">HOME</a></li>
         <li><a href="#about">about</a></li>
         <li><a href="#portfolio">portfolio</a></li>
         <li><a href="#skill">skill</a></li>
@@ -37,9 +35,9 @@
 
   <main>
     <section class="about" id="about">
-      <div class="inner">
+      <div class="inner" data-content="0">
         <h2>about me</h2>
-        <div class="container" data-content="0">
+        <div class="container" >
           <div class="myicon">
 
           </div>
@@ -55,55 +53,55 @@
     </section>
 
     <section class="portfolio" id="portfolio">
-      <div class="inner">
-
+      <div class="inner" data-content="1">
         <h2>portfolio</h2>
-        <div class="container" data-content="1">
-
-
-          <div class="portfolio-item">
-            <a href="" class="js-modal-open" data-target="modal1">
-              <div class="portfolio-item-inner">
-                <figure><img src="img/hosonomeramen.png" alt="ほそのめらーめん"></figure>
-                <p class="categoly">News</p>
-                <p class="item-desc">らーめん屋のWebサイトです。</p>
-
-              </div>
-            </a>
+        <div class="container swiper-container">
+          <div class="swiper-wrapper">
+            <div class="portfolio-item swiper-slide">
+              <a href="" class="js-modal-open" data-target="modal1">
+                <div class="portfolio-item-inner">
+                  <figure><img src="img/hosonomeramen.png" alt="ほそのめらーめん"></figure>
+                  <p class="categoly">News</p>
+                  <p class="item-desc">らーめん屋のWebサイトです。</p>
+                </div>
+              </a>
+            </div>
+  
+            <div class="portfolio-item swiper-slide">
+              <a href="" class="js-modal-open" data-target="modal2">
+                <div class="portfolio-item-inner">
+                  <figure><img src="img/petshop-tera.png" alt="ペットショップ・テラ"></figure>
+                  <p class="categoly">News</p>
+                  <p class="item-desc">ペットショップのホームページを作成しました。</p>
+                </div>
+              </a>
+            </div>
+  
+            <div class="portfolio-item swiper-slide">
+              <a href="" class="js-modal-open" data-target="modal3">
+                <div class="portfolio-item-inner">
+                  <figure><img src="img/the_quiz.png" alt="ざ・くいず"></figure>
+                  <p class="categoly">News</p>
+                  <p class="item-desc">Javascriptの学習を兼ねた4択のクイズゲームを作成しました。</p>
+                </div>
+              </a>
+            </div>
+  
+            <div class="portfolio-item swiper-slide">
+              <a href="" class="js-modal-open" data-target="modal4">
+                <div class="portfolio-item-inner">
+                  <figure><img src="img/123teeth.png" alt="123Teeth"></figure>
+                  <p class="categoly">News</p>
+                  <p class="item-desc">グループ制作で作成した審美歯科のLPサイト</p>
+                </div>
+              </a>
+            </div>
           </div>
+          <div class="swiper-pagination"></div>
+    
 
-          <div class="portfolio-item">
-            <a href="" class="js-modal-open" data-target="modal2">
-              <div class="portfolio-item-inner">
-                <figure><img src="img/petshop-tera.png" alt="ペットショップ・テラ"></figure>
-                <p class="categoly">News</p>
-                <p class="item-desc">ペットショップのホームページを作成しました。</p>
-
-              </div>
-            </a>
-          </div>
-
-          <div class="portfolio-item">
-            <a href="" class="js-modal-open" data-target="modal3">
-              <div class="portfolio-item-inner">
-                <figure><img src="img/the_quiz.png" alt="ざ・くいず"></figure>
-                <p class="categoly">News</p>
-                <p class="item-desc">Javascriptの学習を兼ねた4択のクイズゲームを作成しました。</p>
-
-              </div>
-            </a>
-          </div>
-
-          <div class="portfolio-item">
-            <a href="" class="js-modal-open" data-target="modal4">
-              <div class="portfolio-item-inner">
-                <figure><img src="img/123teeth.png" alt="123Teeth"></figure>
-                <p class="categoly">News</p>
-                <p class="item-desc">グループ制作で作成した審美歯科のLPサイト</p>
-
-              </div>
-            </a>
-          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
 
         </div>
       </div>
@@ -185,10 +183,10 @@
     </section>
 
     <section class="skill" id="skill">
-      <div class="inner">
+      <div class="inner" data-content="2">
 
         <h2>skill</h2>
-        <div class="container" data-content="2">
+        <div class="container">
           <div class="skill-list">
             <dl>
               <dt>フロントエンド</dt>
@@ -225,9 +223,9 @@
     </section>
 
     <section class="contact" id="contact">
-      <div class="inner">
+      <div class="inner" data-content="3">
         <h2>Contact</h2>
-        <div class="container" data-content="3">
+        <div class="container">
           <div class="contact-text">
             <p>感想などいただけると助かります。<br>
               Twitterもやっています。<br>
@@ -270,6 +268,7 @@
   <!-- js -->
 
   <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 
 </body>

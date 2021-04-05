@@ -25,6 +25,13 @@ img {
   background-position: center top;
 }
 
+@keyframes titleanimetion{
+  0% {
+    opacity: 0;
+    letter-spacing: 0.3em;
+  }
+}
+
 header h1 {
   position: absolute;
   top: 15%;
@@ -36,6 +43,7 @@ header h1 {
   padding: 1%;
   padding-left: 10px;
   font-size: 2rem;
+  animation: titleanimetion 2s;
 }
 
 .inner {
@@ -100,6 +108,14 @@ section {
 
 section h2 {
   font-size: 2rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 1s;
+}
+
+section .js-fadein h2{
+  opacity: 1;
+  transform: none;
 }
 
 .container {
@@ -107,13 +123,21 @@ section h2 {
   margin: 10px auto;
   display: flex;
   opacity: 0;
-  transform: translateX(-50%);
-  transition: all .7s;
+  transition: all 1s .5s;
 }
 
-.js-fadein{
+section:nth-of-type(odd) .container{
+  transform: translateX(100px);
+}
+
+section:nth-of-type(even) .container{
+  transform: translateX(-100px);
+}
+
+section:nth-of-type(odd) .js-fadein .container,
+section:nth-of-type(even) .js-fadein .container{
   opacity: 1;
-  transform: translateX(0);
+  transform: none;
 }
 
 .myicon {
@@ -143,14 +167,14 @@ section h2 {
   background: #7fa8af;
 }
 
-.portfolio .container {
-  flex-wrap: wrap;
+.swiper-container{
+  /* background: #000; */
+  width: 100%;
 }
 
+
 .portfolio-item {
-  width: 33%;
   padding: 10px 20px;
-  min-height: 350px;
 }
 
 .portfolio-item a {
@@ -188,6 +212,32 @@ section h2 {
   line-height: 1.5;
 }
 
+.swiper-button-prev,
+.swiper-button-next{
+  width: 60px;
+  height: 60px;
+  background: #000;
+  transform: rotate(45deg);
+}
+.swiper-button-prev{
+  left: 28%;
+}
+
+.swiper-button-prev::after{
+  transform: rotate(-45deg) translate(-26%, 0);
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.swiper-button-next{
+  right: 28%;
+}
+
+.swiper-button-next::after{
+  transform: rotate(-45deg) translate(33%, 0);
+  font-size: 34px;
+  font-weight: bold;
+}
 /* modal */
 
 .modal {
@@ -371,6 +421,7 @@ footer {
   bottom: 10px;
   right: 10px;
   opacity: 0.6;
+  z-index: 200;
 }
 
 @media screen and (max-width:1024px) {
@@ -398,8 +449,13 @@ footer {
   .about-text {
     text-align: center;
   }
-  .portfolio-item {
-    width: 70%;
+
+  .swiper-button-prev{
+    left: 20px;
+  }
+
+  .swiper-button-next{
+    right: 20px;
   }
 
   .modal-content{

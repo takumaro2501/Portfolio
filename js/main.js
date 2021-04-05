@@ -18,7 +18,7 @@
         return false;
       });
     });
-  }
+  };
   
   
   // スムーススクロール
@@ -41,9 +41,9 @@
         }
       });
     });
-  }
+  };
 
-  // フェードイン
+  // fadein
   {
     const targets = document.querySelectorAll('[data-content]');
 
@@ -62,7 +62,7 @@
 
 
     const options = {
-      threshold: .1,
+      threshold: .5,
       rootMargin: '0px 0px -50px'
     };
 
@@ -71,5 +71,36 @@
     targets.forEach(target => {
       observer.observe(target);
     });
-  }
-}
+  };
+
+  // swiper
+  {
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      
+      speed: 100,
+      centeredSlides : true,
+      slideToClickedSlide: true,
+      spaceBetween: 15,
+      paginationClickable: true,
+    
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+        },
+
+        640: {
+          slidesPerView: 3,
+        },
+      }
+    });
+  };
+};
